@@ -1,0 +1,27 @@
+---
+title: "Exams_Modeling"
+author: "Group 1"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  eval = TRUE,
+  fig.width = 5,
+  fig.asp = 0.618,
+  out.width = "70%",
+  dpi = 120,
+  fig.align = "center",
+  cache = FALSE
+)
+#Loading Packages
+library(tidyverse)
+library(plotly)
+library(ggplot2)
+#Dataset
+exams <- read.csv("exams.csv") %>%
+  mutate(eng.score = reading.score + writing.score)
+```
+
